@@ -1,7 +1,7 @@
-package org.craftedsw.tripservicekata.trip
+package com.dubswcraft.tripservicekata.trip
 
-import org.craftedsw.tripservicekata.user.User
-import org.craftedsw.tripservicekata.exception.CollaboratorCallException
+import com.dubswcraft.tripservicekata.exception.CollaboratorCallException
+import com.dubswcraft.tripservicekata.user.User
 
 object TripDAO {
 

@@ -1,6 +1,7 @@
 package org.craftedsw.tripservicekata.user
 
-import org.craftedsw.tripservicekata.exception.CollaboratorCallException
+import com.dubswcraft.tripservicekata.exception.CollaboratorCallException
+import com.dubswcraft.tripservicekata.user.User
 
 object UserSession {
 

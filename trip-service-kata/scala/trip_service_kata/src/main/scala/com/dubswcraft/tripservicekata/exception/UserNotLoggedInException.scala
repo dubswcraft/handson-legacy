@@ -1,4 +1,4 @@
-package org.craftedsw.tripservicekata.exception
+package com.dubswcraft.tripservicekata.exception
 
 class UserNotLoggedInException extends RuntimeException {
 
