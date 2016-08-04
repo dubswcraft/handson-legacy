@@ -15,8 +15,7 @@ public class UserSession {
 	}
 
 	public User getLoggedUser() {
-		throw new CollaboratorCallException(
-				"UserSession.getLoggedUser() should not be called in an unit test");
+		return new User("LOGGED_USER");
 	}
 
 }

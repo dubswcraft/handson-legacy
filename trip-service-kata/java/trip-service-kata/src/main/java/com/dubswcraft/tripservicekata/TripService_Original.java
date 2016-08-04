@@ -17,7 +17,7 @@ public class TripService_Original {
 		boolean isFriend = false;
 		if (loggedUser != null) {
 			for (User friend : user.getFriends()) {
-				if (friend.equals(loggedUser)) {
+				if (friend.getName().equals(loggedUser.getName())) {
 					isFriend = true;
 					break;
 				}
