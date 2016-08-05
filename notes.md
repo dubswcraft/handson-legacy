@@ -20,7 +20,7 @@ Episode 2 - Golden Master:
 Episode 3 - Fix bugs on legacy code:
  ☐ Steps as before, create your system test calling the function that contains the error
  ☐ Capture the result using the output stream
- ☐ Make baby steps as taking smaller and smaller refactoring steps helped me a lot to diminish the risks to almost zero
+ ☐ Make baby steps as taking smaller and smaller refactoring step
    ☐ STEPS 
      ☐ Write a black box characterization test, you need to have a safety net before starting the next step   
      ☐ We need to find the area of code where the buggy code is and isolate it.
