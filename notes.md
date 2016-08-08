@@ -70,7 +70,11 @@ Presentation Notes:
  ☐ We are going to take the piece of existing code without tests and write tests for it
  ☐ When it is 100% covered, then we can refactor it
  ☐ Only automated refactorings are allowed till your code is covered by a test
- ☐ Look at trip service
+ ☐ Look at trip service, started testing from the shortest branch - this is when a user is not logged in exception
+ ☐ The problem that we have is that this is a singleton, we can't inject it, we can't mock it. 
+ ☐ What can we do? We can only use automated refactorings
+ ☐ We can create a seam - a seam is where the two classes meet, the UserSession and the TripService, what we do is isolate the bit that goes to the other class and that is our seam. 
+ ☐ We can create a private class that extends teh trip service
 
 Sandro Mancuso: Refactoring:
  ☐ Start testing from shortest to deepest branch (otherwise too much setup)
