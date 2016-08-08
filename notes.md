@@ -58,15 +58,19 @@ Extract Class - Rule of 3 also:
  ☐ PlayerMessage class - extract as singletons - fix method names because you have PlayerMessage.playerMessageCreate.. not needed, so rename to PlayerMessage.create..
  ☐
 
- Unit Testing on Legacy Code:
-  ☐ 
 
- Refactor conditionals: Explain Variable:
-  ☐ When you try to read a code base that has many conditionals, often the problem is that the condition itself is very hard to understand
- ☐ Extract conditionals to clearly defined variable names.
- ☐ if (places[currentPlayer] > 11) places[currentPlayer] = places[currentPlayer] - 12 - what is this doing? 
- ☐ what is places? what is 11, what is 12?, why does it go to places - 12
+
+Presentation Notes:
+ ☐ Introduce
+ ☐ GoldenMaster
+
+
+
  ☐ 
+ ☐ We are going to take the piece of existing code without tests and write tests for it
+ ☐ When it is 100% covered, then we can refactor it
+ ☐ Only automated refactorings are allowed till your code is covered by a test
+ ☐ Look at trip service
 
 Sandro Mancuso: Refactoring:
  ☐ Start testing from shortest to deepest branch (otherwise too much setup)

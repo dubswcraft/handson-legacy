@@ -1,12 +1,11 @@
 package com.dubswcraft.tripservicekata.trip;
 
-import com.dubswcraft.tripservicekata.exception.CollaboratorCallException;
 import com.dubswcraft.tripservicekata.user.User;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.Lists;
-import com.google.common.collect.Maps;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Map;
 
 public class TripDAO {
 

@@ -1,7 +1,6 @@
 package com.dubswcraft.tripservicekata;
 
 import com.dubswcraft.tripservicekata.trip.Trip;
-import com.dubswcraft.tripservicekata.trip.TripService;
 import com.dubswcraft.tripservicekata.user.User;
 import com.github.approval.Approvals;
 import org.junit.Before;
@@ -38,7 +37,7 @@ public class TripService_GoldenMaster {
     @Test
     public void golden_master() {
         assertEquals(true, true);
-        TripService_Original tripService = new TripService_Original();
+        TripService tripService = new TripService();
         User paul = new User("PAUL");
         paul.addFriend(LOGGED_USER);
         List<Trip> tripsForJoe = tripService.getTripsByUser(JOE);
