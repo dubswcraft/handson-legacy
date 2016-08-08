@@ -76,14 +76,8 @@ Sandro Mancuso: Refactoring:
  ☐ Finally ready to start refactoring after some tests and most coverage: remember
  ☐ Start testing from the shortest to deepest branch
  ☐ Start refactoring from the deepest to the shortest branch - reason being if you want to start refactoring in the middle of your code, you need to have all flags set - however if you go to the deepest, then the snippet of code has everything that it needs, all flags are set so that conditionals are set.
- ☐ In your refactoring, you need to ask yourself, does this behaviour belong here?
- ☐ Look for feature envy, this is where the trip service envies the user class. It wants to be the user class in the following snippet:
-      for (User friend : user.getFriends()) {
-        if (friend.equals(loggedUser)) {
-          isFriend = true;
-          break;
-        }
-      }
+ 
+ 
  ☐ If the user class has the collection of friends, it might be worth asking user, are you friends with X?
  ☐ So create a user class and write the test should_inform_when_users_are_not_friends
  ☐ Meetup: When working with legacy code - try to bring the variable to the block where it is used.
