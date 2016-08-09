@@ -134,6 +134,9 @@ Presentation Notes:
    ☐ So just create an instance with the same name that calls the real static call
    ☐ Also, we want to get rid of TestableTripService, we can make tripsBy private instead of protected.
 
+ ☐ Fix a bug
+   ☐  there was a typo in the report 
+ ☐ Add a feature - make the report a json reporter
 
 
 Sandro Mancuso: Refactoring:

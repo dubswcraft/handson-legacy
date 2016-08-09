@@ -24,7 +24,14 @@ public class TripService {
 			}
 			if (isFriend) {
 				tripList = TripDAO.findTripsByUser(user);
-			}
+                String userName = user.getName();
+                StringBuilder sb = new StringBuilder();
+                sb.append("Trps For User:" + userName);
+                for (Trip t: tripList) {
+                    sb.append(t.getTripName());
+                    sb.append("\t");
+                }
+            }
 			return tripList;
 		} else {
 			throw new UserNotLoggedInException();
