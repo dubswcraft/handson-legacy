@@ -1,9 +1,9 @@
 package com.dubswcraft.tripservicekata.trip;
 
-import com.dubswcraft.tripservicekata.exception.UserNotLoggedInException;
-import org.junit.Test;
-
 public class TripServiceTest {
+
+    // allowed users JOE, SARAH, DEBORAH, PAUL
+    // allowed countries in dummy db LONDON MILAN NEW_YORK SINGAPORE TOKYO SYDNEY
 
 // step 1 - seam, extract UserSession.getInstance to method, return null to trigger this
 //    @Test(expected = UserNotLoggedInException.class) public void

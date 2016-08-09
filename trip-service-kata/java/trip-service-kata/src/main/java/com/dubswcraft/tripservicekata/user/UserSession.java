@@ -1,8 +1,5 @@
 package com.dubswcraft.tripservicekata.user;
 
-
-import com.dubswcraft.tripservicekata.exception.CollaboratorCallException;
-
 public class UserSession {
 
 	private static final UserSession userSession = new UserSession();
