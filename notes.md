@@ -133,8 +133,6 @@ Presentation Notes:
    ☐ We want to do everything in small steps
    ☐ So just create an instance with the same name that calls the real static call
    ☐ Also, we want to get rid of TestableTripService, we can make tripsBy private instead of protected.
-   ☐ 
-   ☐ 
 
 
 
