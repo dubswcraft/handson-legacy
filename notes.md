@@ -1,80 +1,20 @@
-What is legacy code:
- ☐ Breaks other parts of the system. 
- ☐ 
-
-Steps 1 - Initial Characterization Test:
- ☐ MEETUP: You make assumptions about legacy code, you need to test these assumptions via characterization tests
- ☐ This is the first characterization tests, it is meant to characterize what the system is doing.  
- ☐ MEETUP: Baby steps very important - why? 
- ☐ Renamed SomeTest to GameTests
- ☐ After a couple of tests - we recognize duplication - getConsoleOutput
- ☐ whenRollingDiceSomethingHappens - we don't really know what happens. We get a IndexOutOfBounds.. We learn more about the system as it stands.
- ☐ What did we learn from this - we wrote some tests we started understanding the system.  
- ☐ How useful these tests are: I want some very simple tests when dealing with legacy code.
- 
-Episode 2 - Golden Master: 
- ☐ MEETUP: Whenever you start dealing with an existing software system, you need to have a basic safety net
- ☐  So we will treat the system as a black box (we do not care about the internal behaviour of the system, we care just about the whole system inputs and outputs) and we will test only the outputs for given inputs.
- ☐ Really like the golden master - need to play around with more tomorrow.
-
-Episode 3 - Fix bugs on legacy code:
- ☐ Steps as before, create your system test calling the function that contains the error
- ☐ Capture the result using the output stream
- ☐ Make baby steps as taking smaller and smaller refactoring step
-   ☐ STEPS 
-     ☐ Write a black box characterization test, you need to have a safety net before starting the next step   
-     ☐ We need to find the area of code where the buggy code is and isolate it.
-     ☐ Write another test that expresses the correct behaviour, this should fail. 
-     ☐ 
-
-Episode 4 - Add a feature:
- ☐ System test as normal, First step - get all the consoles out of the main class
- ☐ Create a static with a same name as the class
- ☐ Add a feature that adds captures all the game output
- ☐ Use coverage to identify area
- ☐ Introduce unit test for new class
- ☐ Add a new feature
- ☐ Write a system test for this.
-   ☐ Introduce the notion of GameOutput - had ConsoleOutput implementing GameOutput, bring in brand new TextOutput 
-
-   Episode 5 - Rules on Refactoring:
-    ☐ MEETUP: This was good, extract method - refactor, duplicate steps.
-
-    Episode 6 - Extract and override:
-     ☐ MEETUP - Use when you have singletons
-     ☐ 
-     ☐ 
-Pure Functions:
- ☐ MEETUP: Mention this
- ☐ TODO: Didn't know why he had to make the methods static.
-
-Refactoring - Rule of 3:
- ☐ 
-
-Extract Class - Rule of 3 also:
- ☐ rename your pure functions to have noun+verb+situation 
- ☐ ie playerMessageCreateWhenNewPlayerAdded 
- ☐ assume we had 3 methods that had the playerMessageCreate..., rule of 3 determines that we need to extract to a new class
- ☐ PlayerMessage class - extract as singletons - fix method names because you have PlayerMessage.playerMessageCreate.. not needed, so rename to PlayerMessage.create..
- ☐
-
-
 
 Presentation Notes:
- ☐ Introduce
  ☐ GoldenMaster
-
-
-
- ☐ 
- ☐ We are going to take the piece of existing code without tests and write tests for it
- ☐ When it is 100% covered, then we can refactor it
- ☐ Only automated refactorings are allowed till your code is covered by a test
- ☐ Look at trip service, started testing from the shortest branch - this is when a user is not logged in exception
- ☐ The problem that we have is that this is a singleton, we can't inject it, we can't mock it. 
- ☐ What can we do? We can only use automated refactorings
- ☐ We can create a seam - a seam is where the two classes meet, the UserSession and the TripService, what we do is isolate the bit that goes to the other class and that is our seam. 
- ☐ We can create a private class that extends teh trip service
+   ☐ Before making changes to legacy code, it is important to guard against unintended changes.
+   ☐ We could even introduce bugs by “fixing” behaviour.
+   ☐ Characterization tests are a means of capturing the existing behaviour. 
+   ☐ They are meant to characterize what the system is already doing.
+ ☐ Remainder/Unit testing
+   ☐ We are going to take the piece of existing code without tests and write tests for it
+   ☐ Only automated refactorings are allowed till your code is covered by a test
+   ☐ When it is 100% covered, then we can refactor it
+   ☐ Look at trip service, started testing from the shortest branch - this is when a user is not logged in exception
+ ☐ Introduce Seams
+   ☐ The problem that we have is that this is a singleton, we can't inject it, we can't mock it. 
+   ☐ What can we do? We can only use automated refactorings
+   ☐ We can create a seam - a seam is where the two classes meet, the UserSession and the TripService, what we do is isolate the bit that goes to the other class and that is our seam. 
+   ☐ We can create a private class that extends teh trip service
  ☐ Run your code coverage, make sure that the test that you have just written tests the short branch. 
  ☐ Code coverage is a very useful took when working with code coverage. We don't care about percentages, what we do care about is whether the test that we have written covered what we expected it to cover. 
  ☐ This seam is nice, but it's not ideal. Talk over test - where is the notion of a user not logged in. 
@@ -137,7 +77,12 @@ Presentation Notes:
  ☐ Fix a bug
    ☐  there was a typo in the report 
  ☐ Add a feature - make the report a json reporter
-
+    ☐ Identify an area which breaks the single responsibility principle.
+    ☐ 
+    ☐ Remove all references to the object itself. This might mean making it static, or pulling it out of the class, or if you’re passing the object in, removing the parameter. Instead, pass in the things it needs.
+    ☐ 
+    ☐ Write tests for it.
+    ☐ Refactor it until you like the interface.
 
 Sandro Mancuso: Refactoring:
  ☐ Start testing from shortest to deepest branch (otherwise too much setup)
