@@ -1,7 +1,7 @@
 package org.craftedsw.tripservicekata.trip
 
-import org.craftedsw.tripservicekata.infrastructure.UnitSpec
+import org.scalatest.FlatSpec
 
-class TripServiceSpec extends UnitSpec {
+class TripServiceSpec extends FlatSpec {
 
 }

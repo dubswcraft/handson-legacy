@@ -2,7 +2,7 @@ package com.dubswcraft.tripservicekata.user
 
 import com.dubswcraft.tripservicekata.trip.Trip
 
-class User {
+case class User(name: String) {
 
 	val tripList = scala.collection.mutable.ListBuffer.empty[Trip]
 	val friendList = scala.collection.mutable.ListBuffer.empty[User]

@@ -1,0 +1,12 @@
+Trps For User:JOE
+MILAN	
+
+Trps For User:PAUL
+LONDON	MILAN	SYDNEY	
+
+Trps For User:DEBORAH
+
+
+Trps For User:SARAH
+MILAN	NEW_YORK	SINGAPORE	TOKYO
+
